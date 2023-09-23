@@ -42,7 +42,7 @@ limitations under the License.
 ## Usage
 
 ```javascript
-import nanminBy from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-nanmin-by@deno/mod.js';
+import nanminBy from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-nanmin-by@v0.1.0-deno/mod.js';
 ```
 
 #### nanminBy( N, x, stride, clbk\[, thisArg] )
@@ -194,7 +194,7 @@ var v = nanminBy.ndarray( 3, x, 1, x.length-3, accessor );
 import discreteUniform from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-discrete-uniform@deno/mod.js';
 import randu from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-randu@deno/mod.js';
 import filledarrayBy from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-filled-by@deno/mod.js';
-import nanminBy from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-nanmin-by@deno/mod.js';
+import nanminBy from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-nanmin-by@v0.1.0-deno/mod.js';
 
 function fill() {
     if ( randu() < 0.2 ) {
