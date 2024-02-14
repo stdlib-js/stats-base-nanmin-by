@@ -42,6 +42,11 @@ limitations under the License.
 ## Usage
 
 ```javascript
+import nanminBy from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-nanmin-by@esm/index.mjs';
+```
+The previous example will load the latest bundled code from the esm branch. Alternatively, you may load a specific version by loading the file from one of the [tagged bundles](https://github.com/stdlib-js/stats-base-nanmin-by/tags). For example,
+
+```javascript
 import nanminBy from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-nanmin-by@v0.2.0-esm/index.mjs';
 ```
 
@@ -199,7 +204,7 @@ var v = nanminBy.ndarray( 3, x, 1, x.length-3, accessor );
 import discreteUniform from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-discrete-uniform@esm/index.mjs';
 import randu from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-randu@esm/index.mjs';
 import filledarrayBy from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-filled-by@esm/index.mjs';
-import nanminBy from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-nanmin-by@v0.2.0-esm/index.mjs';
+import nanminBy from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-nanmin-by@esm/index.mjs';
 
 function fill() {
     if ( randu() < 0.2 ) {
