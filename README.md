@@ -42,6 +42,11 @@ limitations under the License.
 ## Usage
 
 ```javascript
+import nanminBy from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-nanmin-by@deno/mod.js';
+```
+The previous example will load the latest bundled code from the deno branch. Alternatively, you may load a specific version by loading the file from one of the [tagged bundles](https://github.com/stdlib-js/stats-base-nanmin-by/tags). For example,
+
+```javascript
 import nanminBy from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-nanmin-by@v0.2.1-deno/mod.js';
 ```
 
@@ -194,7 +199,7 @@ var v = nanminBy.ndarray( 3, x, 1, x.length-3, accessor );
 import discreteUniform from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-discrete-uniform@deno/mod.js';
 import randu from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-randu@deno/mod.js';
 import filledarrayBy from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-filled-by@deno/mod.js';
-import nanminBy from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-nanmin-by@v0.2.1-deno/mod.js';
+import nanminBy from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-nanmin-by@deno/mod.js';
 
 function fill() {
     if ( randu() < 0.2 ) {
