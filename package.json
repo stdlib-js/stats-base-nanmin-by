@@ -43,16 +43,16 @@
     "@stdlib/utils-define-nonenumerable-read-only-property": "^0.2.1"
   },
   "devDependencies": {
-    "@stdlib/array-filled-by": "^0.2.0",
-    "@stdlib/array-float64": "^0.2.0",
-    "@stdlib/math-base-special-floor": "^0.2.0",
-    "@stdlib/math-base-special-pow": "^0.2.0",
-    "@stdlib/random-base-discrete-uniform": "^0.2.0",
-    "@stdlib/random-base-randu": "^0.2.0",
+    "@stdlib/array-filled-by": "^0.2.1",
+    "@stdlib/array-float64": "^0.2.1",
+    "@stdlib/math-base-special-floor": "^0.2.1",
+    "@stdlib/math-base-special-pow": "^0.2.1",
+    "@stdlib/random-base-discrete-uniform": "^0.2.1",
+    "@stdlib/random-base-randu": "^0.2.1",
     "tape": "git+https://github.com/kgryte/tape.git#fix/globby",
     "istanbul": "^0.4.1",
     "tap-min": "git+https://github.com/Planeshifter/tap-min.git",
-    "@stdlib/bench-harness": "^0.2.0"
+    "@stdlib/bench-harness": "^0.2.1"
   },
   "engines": {
     "node": ">=0.10.0",
