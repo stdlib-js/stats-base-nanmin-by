@@ -35,14 +35,32 @@ limitations under the License.
 
 > Calculate the minimum value of a strided array via a callback function, ignoring `NaN` values.
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/stats-base-nanmin-by
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm`][esm-url] branch (see [README][esm-readme]).
+-   If you are using Deno, visit the [`deno`][deno-url] branch (see [README][deno-readme] for usage intructions).
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd`][umd-url] branch (see [README][umd-readme]).
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+To view installation and usage instructions specific to each branch build, be sure to explicitly navigate to the respective README files on each branch, as linked to above.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
 ```javascript
-import nanminBy from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-nanmin-by@deno/mod.js';
+var nanminBy = require( '@stdlib/stats-base-nanmin-by' );
 ```
 
 #### nanminBy( N, x, stride, clbk\[, thisArg] )
@@ -99,7 +117,7 @@ var cnt = context.count;
 The `N` and `stride` parameters determine which elements in `x` are accessed at runtime. For example, to access every other element
 
 ```javascript
-import floor from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-floor@deno/mod.js';
+var floor = require( '@stdlib/math-base-special-floor' );
 
 function accessor( v ) {
     return v * 2.0;
@@ -115,8 +133,8 @@ var v = nanminBy( N, x, 2, accessor );
 Note that indexing is relative to the first index. To introduce an offset, use [`typed array`][mdn-typed-array] views.
 
 ```javascript
-import Float64Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-float64@deno/mod.js';
-import floor from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-floor@deno/mod.js';
+var Float64Array = require( '@stdlib/array-float64' );
+var floor = require( '@stdlib/math-base-special-floor' );
 
 function accessor( v ) {
     return v * 2.0;
@@ -191,10 +209,10 @@ var v = nanminBy.ndarray( 3, x, 1, x.length-3, accessor );
 <!-- eslint no-undef: "error" -->
 
 ```javascript
-import discreteUniform from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-discrete-uniform@deno/mod.js';
-import randu from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-randu@deno/mod.js';
-import filledarrayBy from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-filled-by@deno/mod.js';
-import nanminBy from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-nanmin-by@deno/mod.js';
+var discreteUniform = require( '@stdlib/random-base-discrete-uniform' );
+var randu = require( '@stdlib/random-base-randu' );
+var filledarrayBy = require( '@stdlib/array-filled-by' );
+var nanminBy = require( '@stdlib/stats-base-nanmin-by' );
 
 function fill() {
     if ( randu() < 0.2 ) {
@@ -245,7 +263,7 @@ console.log( v );
 
 ## Notice
 
-This package is part of [stdlib][stdlib], a standard library with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
+This package is part of [stdlib][stdlib], a standard library for JavaScript and Node.js, with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
 
 For more information on the project, filing bug reports and feature requests, and guidance on how to develop [stdlib][stdlib], see the main project [repository][stdlib].
 
@@ -314,15 +332,15 @@ Copyright &copy; 2016-2025. The Stdlib [Authors][stdlib-authors].
 
 <!-- <related-links> -->
 
-[@stdlib/stats/base/dnanmin]: https://github.com/stdlib-js/stats-base-dnanmin/tree/deno
+[@stdlib/stats/base/dnanmin]: https://github.com/stdlib-js/stats-base-dnanmin
 
-[@stdlib/stats/base/min-by]: https://github.com/stdlib-js/stats-base-min-by/tree/deno
+[@stdlib/stats/base/min-by]: https://github.com/stdlib-js/stats-base-min-by
 
-[@stdlib/stats/base/nanmax-by]: https://github.com/stdlib-js/stats-base-nanmax-by/tree/deno
+[@stdlib/stats/base/nanmax-by]: https://github.com/stdlib-js/stats-base-nanmax-by
 
-[@stdlib/stats/base/nanmin]: https://github.com/stdlib-js/stats-base-nanmin/tree/deno
+[@stdlib/stats/base/nanmin]: https://github.com/stdlib-js/stats-base-nanmin
 
-[@stdlib/stats/base/snanmin]: https://github.com/stdlib-js/stats-base-snanmin/tree/deno
+[@stdlib/stats/base/snanmin]: https://github.com/stdlib-js/stats-base-snanmin
 
 <!-- </related-links> -->
 
