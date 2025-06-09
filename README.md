@@ -35,38 +35,32 @@ limitations under the License.
 
 > Calculate the minimum value of a strided array via a callback function, ignoring `NaN` values.
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/stats-base-nanmin-by
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm`][esm-url] branch (see [README][esm-readme]).
+-   If you are using Deno, visit the [`deno`][deno-url] branch (see [README][deno-readme] for usage intructions).
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd`][umd-url] branch (see [README][umd-readme]).
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+To view installation and usage instructions specific to each branch build, be sure to explicitly navigate to the respective README files on each branch, as linked to above.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
-To use in Observable,
-
 ```javascript
-nanminBy = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-nanmin-by@umd/browser.js' )
-```
-
-To vendor stdlib functionality and avoid installing dependency trees for Node.js, you can use the UMD server build:
-
-```javascript
-var nanminBy = require( 'path/to/vendor/umd/stats-base-nanmin-by/index.js' )
-```
-
-To include the bundle in a webpage,
-
-```html
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-nanmin-by@umd/browser.js"></script>
-```
-
-If no recognized module system is present, access bundle contents via the global scope:
-
-```html
-<script type="text/javascript">
-(function () {
-    window.nanminBy;
-})();
-</script>
+var nanminBy = require( '@stdlib/stats-base-nanmin-by' );
 ```
 
 #### nanminBy( N, x, strideX, clbk\[, thisArg] )
@@ -210,16 +204,11 @@ var v = nanminBy.ndarray( 3, x, 1, x.length-3, accessor );
 
 <!-- eslint no-undef: "error" -->
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<body>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/random-base-uniform@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/array-filled-by@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/random-base-bernoulli@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-nanmin-by@umd/browser.js"></script>
-<script type="text/javascript">
-(function () {
+```javascript
+var uniform = require( '@stdlib/random-base-uniform' );
+var filledarrayBy = require( '@stdlib/array-filled-by' );
+var bernoulli = require( '@stdlib/random-base-bernoulli' );
+var nanminBy = require( '@stdlib/stats-base-nanmin-by' );
 
 function rand() {
     if ( bernoulli( 0.8 )< 0.2 ) {
@@ -237,11 +226,6 @@ console.log( x );
 
 var v = nanminBy( x.length, x, 1, accessor );
 console.log( v );
-
-})();
-</script>
-</body>
-</html>
 ```
 
 </section>
@@ -257,7 +241,7 @@ console.log( v );
 ## See Also
 
 -   <span class="package-name">[`@stdlib/stats-strided/dnanmin`][@stdlib/stats/strided/dnanmin]</span><span class="delimiter">: </span><span class="description">calculate the minimum value of a double-precision floating-point strided array, ignoring NaN values.</span>
--   <span class="package-name">[`@stdlib/stats-base/min-by`][@stdlib/stats/base/min-by]</span><span class="delimiter">: </span><span class="description">calculate the minimum value of a strided array via a callback function.</span>
+-   <span class="package-name">[`@stdlib/stats-strided/min-by`][@stdlib/stats/strided/min-by]</span><span class="delimiter">: </span><span class="description">calculate the minimum value of a strided array via a callback function.</span>
 -   <span class="package-name">[`@stdlib/stats-base/nanmax-by`][@stdlib/stats/base/nanmax-by]</span><span class="delimiter">: </span><span class="description">calculate the maximum value of a strided array via a callback function, ignoring NaN values.</span>
 -   <span class="package-name">[`@stdlib/stats-base/nanmin`][@stdlib/stats/base/nanmin]</span><span class="delimiter">: </span><span class="description">calculate the minimum value of a strided array, ignoring NaN values.</span>
 -   <span class="package-name">[`@stdlib/stats-strided/snanmin`][@stdlib/stats/strided/snanmin]</span><span class="delimiter">: </span><span class="description">calculate the minimum value of a single-precision floating-point strided array, ignoring NaN values.</span>
@@ -342,19 +326,19 @@ Copyright &copy; 2016-2025. The Stdlib [Authors][stdlib-authors].
 
 [mdn-typed-array]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray
 
-[@stdlib/array/base/accessor]: https://github.com/stdlib-js/array-base-accessor/tree/umd
+[@stdlib/array/base/accessor]: https://github.com/stdlib-js/array-base-accessor
 
 <!-- <related-links> -->
 
-[@stdlib/stats/strided/dnanmin]: https://github.com/stdlib-js/stats-strided-dnanmin/tree/umd
+[@stdlib/stats/strided/dnanmin]: https://github.com/stdlib-js/stats-strided-dnanmin
 
-[@stdlib/stats/base/min-by]: https://github.com/stdlib-js/stats-base-min-by/tree/umd
+[@stdlib/stats/strided/min-by]: https://github.com/stdlib-js/stats-strided-min-by
 
-[@stdlib/stats/base/nanmax-by]: https://github.com/stdlib-js/stats-base-nanmax-by/tree/umd
+[@stdlib/stats/base/nanmax-by]: https://github.com/stdlib-js/stats-base-nanmax-by
 
-[@stdlib/stats/base/nanmin]: https://github.com/stdlib-js/stats-base-nanmin/tree/umd
+[@stdlib/stats/base/nanmin]: https://github.com/stdlib-js/stats-base-nanmin
 
-[@stdlib/stats/strided/snanmin]: https://github.com/stdlib-js/stats-strided-snanmin/tree/umd
+[@stdlib/stats/strided/snanmin]: https://github.com/stdlib-js/stats-strided-snanmin
 
 <!-- </related-links> -->
 
