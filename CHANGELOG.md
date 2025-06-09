@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2025-06-07)
+## Unreleased (2025-06-09)
 
 <section class="features">
 
@@ -34,6 +34,7 @@ This release closes the following issue:
 
 <details>
 
+-   [`43d18b4`](https://github.com/stdlib-js/stdlib/commit/43d18b4e771a2fcb6bc6c634641f267587d514e0) - **refactor:** update paths _(by Gururaj Gurram)_
 -   [`03f6481`](https://github.com/stdlib-js/stdlib/commit/03f6481a6a63000e179e552d90de286b167e7402) - **docs:** add missing private annotations _(by Athan Reines)_
 -   [`ae34f8c`](https://github.com/stdlib-js/stdlib/commit/ae34f8c98aabdf4af97b5d3eae5bd9fc93fd294d) - **feat:** refactor and add protocol support to `stats/base/nanmin-by` [(#6464)](https://github.com/stdlib-js/stdlib/pull/6464) _(by Gautam Kaushik, Athan Reines, stdlib-bot, Gururaj Gurram)_
 -   [`ce0db06`](https://github.com/stdlib-js/stdlib/commit/ce0db0686f8e0fb2c3c32df5a12058731aed3aa8) - **refactor:** update paths _(by Aayush Khanna)_
